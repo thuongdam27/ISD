@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Service</title>
+    <link href="../Images/LOGO_V2.png" rel="icon" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/customer_service.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="sidebar">
+        <img alt="admin" src="../Images/LOGO_V2.png" />
+        <h2>T^3 Restaurant</h2>
+        <ul>
+          <li>
+            <a class="active" href="../html/admin.html">
+              <i class="fas fa-home"> </i>
+              Trang tổng quan
+            </a>
+          </li>
+          <li>
+            <a href="../html/food_service.html">
+              <i class="fas fa-utensils"> </i>
+              Sản phẩm
+            </a>
+          </li>
+            <li>
+                <a href="../html/banner.html">
+                    <i class="fas fa-image">
+                    </i>
+                    Quản lý Banner
+                </a>
+            </li>
+          <li>
+            <a href="../html/customer_sevice.html">
+              <i class="fas fa-users"> </i>
+              Khách hàng
+            </a>
+          </li>
+          <li>
+            <a href="../html/order.html">
+              <i class="fas fa-shopping-cart"> </i>
+              Đơn hàng
+            </a>
+          </li>
+          <li>
+            <a href="../html/statistical.html">
+              <i class="fas fa-chart-bar"> </i>
+              Thống kê
+            </a>
+          </li>
+
+          <li>
+            <a id="logout" href="../html/newhome.html">
+              <i class="fas fa-sign-out-alt"> </i>
+              Đăng xuất
+            </a>
+            
+          </li>
+        </ul>
+      </div>
+      <div class="content">
+        <div class="header">
+          <select>
+            <option>Tất cả</option>
+          </select>
+          <input placeholder="Tìm kiếm khách hàng..." type="text" />
+          <input placeholder="mm/dd/yyyy" type="text" />
+          <input placeholder="mm/dd/yyyy" type="text" />
+         
+          <button class="add_cus_btn">
+            <i class="fas fa-plus"> </i>
+            Thêm khách hàng
+          </button>
+        </div>
+
+        <div id="popup" class="popup hidden">
+          <div class="popup_content">
+            <span class="close_btn">
+              <i class="fa-solid fa-xmark"></i> 
+            </span>
+              <h2>THÊM KHÁCH HÀNG</h2>
+              <form id="new_cus_form">
+                <label for="cus_name">Tên Khách Hàng:</label>
+                <input type="text" id="cus_name" placeholder="Nhập tên khách hàng..." required>
+
+                <label for="cus_gender">Giới tính:</label>
+                <div id="cus_gender" class="gender-options">
+                  <label>
+                    <input type="radio" name="gender" value="male" required>
+                    Nam
+                  </label>
+                  <label>
+                    <input type="radio" name="gender" value="female" required>
+                    Nữ
+                  </label>
+                </div>
+
+                <label for="cus_dob">Ngày sinh:</label>
+                <input type="date" id="cus_dob" required>
+
+                <label for="cus_address">Địa chỉ:</label>
+                <input type="text" id="cus_address" placeholder="Nhập địa chỉ khách hàng..." required>
+
+                <label for="cus_phone">Số Điện thoại:</label>
+                <input type="text" id="cus_phone" placeholder="Nhập số điện thoại..." required>
+
+                <label for="cus_email">Email:</label>
+                <input type="email" id="cus_email" placeholder="Nhập email khách hàng..." required>
+                
+                
+
+
+                <button type="submit">
+                  Thêm Khách Hàng Mới
+                </button>
+                
+              </form>
+          </div>
+        </div>
+
+
+
+        <table>
+          <thead>
+            <tr>
+              <th>STT</th>
+
+              <th>HỌ VÀ TÊN</th>
+
+              <th>GIỚI TÍNH</th>
+
+              <th>NGÀY SINH</th>
+
+              <th>ĐỊA CHỈ</th>
+
+              <th>LIÊN HỆ</th>
+
+              <th>EMAIL</th>
+
+              <th>NGÀY TẠO</th>      
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Nguyễn Tuấn Anh</td>
+              <td>nam</td>
+              <td>29/08/2004</td>
+              <td>Linh Trung, Thủ Đức</td>
+              <td>03512345678</td>
+              <td>user@gmail.com</td>
+              <td>20/10/2024</td>
+            </tr>
+
+            <tr>
+              <td>2</td>
+              <td>Hán Hữu Trung</td>
+              <td>nam</td>
+              <td>06/12/2004</td>
+              <td>Bình Dương, Dĩ An</td>
+              <td>098757375747</td>
+              <td>user2@gmail.com</td>
+              <td>19/10/2024</td>
+            </tr>
+
+            <tr>
+              <td>3</td>
+              <td>Nguyễn Thị Hoa</td>
+              <td>nữ</td>
+              <td>06/10/2003</td>
+              <td>Linh Trung, Thủ Đức</td>
+              <td>03512344342</td>
+              <td>user3@gmail.com</td>
+              <td>22/10/2024</td>
+            </tr>
+          </tbody>
+
+          
+          
+        </table>
+      </div>
+    </div>
+    <script src="../js/cus_service.js"></script>
+    <script src="../js/module_dangnhap.js"></script>
+  </body>
+</html>
